@@ -34,9 +34,18 @@ public class ComparingApples {
 		System.out.println("=====filtering with lambda and predicate======");
 		result = PredicateFilter.predicateFilter(inventory,(Apple a)->"red".equals(a.getColour()));
 		System.out.println(result.toString());
+		System.out.println("=====filtering with lambda and predicate but not apples======");
+		List<Integer> intList = new ArrayList<Integer>();
+		intList.add(1);
+		intList.add(2);
+		intList.add(3);
+		intList.add(4);
+		intList.add(5); 
+		System.out.println(intList.toString());
+		List<Integer> resultInt = PredicateFilter.predicateFilter(intList,(Integer i) -> i % 2 == 0);
+		System.out.println(resultInt.toString());
 		System.out.println("=====printing======");
 		AppleFilter.prettyPrintApple(inventory, new ApplePrinterHeavyOrLight());
-		
 	}
 
 }
