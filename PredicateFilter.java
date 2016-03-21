@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.function.Predicate;
 public class PredicateFilter {
 
 	public static <T> List<T> predicateFilter(List<T> list, Predicate<T> p) {
@@ -11,7 +12,4 @@ public class PredicateFilter {
 		return filteredList;
 	}
 
-} 
-interface Predicate<T> {
-	public boolean test(T t);
 }
